@@ -1,0 +1,2 @@
+module StarcraftApi
+end

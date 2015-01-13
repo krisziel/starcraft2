@@ -1,0 +1,157 @@
+table {
+  font-size: 40px;
+}
+td {
+  padding: 10px;
+}
+#leagueTable {
+  opacity: 0;
+  -webkit-transition: all 1s;
+  -webkit-transform: scale(.9);
+  margin: 20px auto;
+  z-index: 2;
+  position: relative;
+}
+
+.profile {
+  width: 800px;
+  height: 600px;
+  position: absolute;
+  margin-left: -400px;
+  left: 50%;
+  top: 10px;
+  border: 2px solid #2ABBFF;
+  background: #000000;
+  -webkit-border-radius: 10px;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all 1s;
+  -webkit-transform: scale(.9);
+  z-index: 3;
+  .name {
+    font-size: 30px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #2ABBFF;
+  }
+  .ladderTeams {
+    width: 250px;
+    border-right: 1px solid #2ABBFF;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    li {
+      height: 48px;
+      text-align: left;
+      border-bottom: 1px solid #2ABBFF;
+      line-height: 28px;
+      font-size: 18px;
+      line-height: 48px;
+      padding: 0 10px 0 45px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+      .league {
+        position: absolute;
+        margin: 0 0 0 -45px;
+        -webkit-transform: scale(.9);
+      }
+      .players {
+        font-size: 12px;
+        width: 165px;
+        line-height: 12px;
+        top: 4px;
+        right: 0;
+        position: absolute;
+        line-height: 14px;
+      }
+    }
+    li.selected {
+      background: -webkit-linear-gradient(0deg, rgba(0,22,64,1) 0%,rgba(1,28,81,1) 100%);
+      color: #ffffff;
+      box-shadow: inset 0 0 15px #0354B0;
+    }
+    li.title {
+      text-align: center;
+      font-size: 22px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0;
+    }
+  }
+  .ladder {
+    width: 546px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style: none;
+    opacity: 0;
+    -webkit-transition: all .5s;
+    li {
+      width: 100%;
+      height: 32px;
+      border-bottom: 1px solid #2ABBFF;
+      line-height: 32px;
+      position: relative;
+      * {
+        float: left;
+      }
+      position {
+        width: 20px;
+        padding-left: 5px;
+      }
+      race {
+        width: 40px;
+        height: 32px;
+      }
+      name {
+        width: 190px;
+        text-align: left;
+      }
+      win {
+        width: 90px;
+      }
+      loss {
+        width: 90px;
+      }
+      points {
+        width: 90px;
+      }
+    }
+    li.title {
+      position: fixed;
+    }
+    li.selected {
+      background: -webkit-linear-gradient(0deg, rgba(0,22,64,1) 0%,rgba(1,28,81,1) 100%);
+      color: #ffffff;
+      box-shadow: inset 0 0 8px #0354B0;
+    }
+  }
+  .ladder-content {
+    height: 524px;
+    margin-top: 32px;
+    position: relative;
+  }
+  .ladder-header {
+    position: absolute;
+    left: 250px;
+    background: #000000;
+    height: 32px;
+  }
+}
+.loading {
+  width: 32px;
+  height: 32px;
+  left: 50%;
+  top: 50%;
+  margin: -16px 0 0 -16px;
+  position: absolute;
+  background: url(<%= asset_path('loading.gif') %>);
+  z-index: 1;
+  -webkit-transition: all 1s;
+  -webkit-transform: scale(1);
+}

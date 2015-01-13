@@ -43,7 +43,7 @@ module StarcraftApi
         @league_highest = {
           :type => data['current_highest_type'],
           :league => @leagues[data['current_highest_league']],
-          :rank => data['current_highest_type']
+          :rank => data['current_highest_leaguerank']
         }
       end
       if data['current_league_1v1']

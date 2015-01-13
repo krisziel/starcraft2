@@ -1,0 +1,106 @@
+.clan-search {
+  border-radius: 7px;
+  height: 50px;
+  width: 350px;
+  padding: 0;
+  margin: 0 0 0 -175px;
+  top: 100px;
+  left: 50%;
+  position: absolute;
+  input {
+    background: #000D20;
+    color: #2ABBFF;
+    border: 2px solid #ffffff;
+  }
+  .text-input {
+    float: left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100%;
+    margin: 0;
+    font-size: 22px;
+    width: 248px;
+    padding: 10px;
+    &:focus {
+      border: 2px solid #2ABBFF;
+      box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    }
+  }
+  .submit-button {
+    float: left;
+    height: 50px;
+    font-size: 22px;
+    display: block;
+    width: 96px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+    &:hover {
+      border: 2px solid #2ABBFF;
+      box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+      border-left: none;
+    }
+  }
+  #clan-search-loading {
+    margin-left: 0;
+    left: 206px;
+  }
+  &.members {
+    .text-input {
+      border-bottom-left-radius: 0;
+    }
+    .submit-button {
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+.clan-members {
+  width: 344px;
+  margin: 0;
+  padding: 0;
+  top: 150px;
+  position: absolute;
+  left: 50%;
+  margin: 0 0 20px -175px;
+  list-style: none;
+  border: 2px solid #FFFFFF;
+  border-top: 0;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  li {
+    padding: 5px;
+    line-height: 26px;
+    border-top: 1px solid #FFFFFF;
+    .league-small {
+      float: left;
+    }
+    .race-small {
+      margin: 2px 0 0 5px;
+      float: left;
+    }
+  }
+  .title {
+    font-size: 22px;
+    border-top: 0;
+  }
+  .create {
+    font-size: 20px;
+  }
+}
+
+.loading {
+  width: 32px;
+  height: 32px;
+  left: 50%;
+  top: 50%;
+  margin: -16px 0 0 -16px;
+  position: absolute;
+  background: url('loading.gif');
+  z-index: 1;
+  -webkit-transition: all 1s;
+  -webkit-transform: scale(1);
+  opacity: 0;
+}
+.visible {
+  opacity: 1;
+}

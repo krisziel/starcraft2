@@ -1,7 +1,7 @@
 module StarcraftApi
 
   class Ggtracker
-    attr_accessor :id, :name, :gateway, :matches_count, :hours_players, :race, :league_highest, :league_1v1, :league_2v2, :league_3v3, :league_4v4, :points, :season_games, :career_games, :apm
+    attr_accessor :ggtrackerid, :id, :name, :gateway, :matches_count, :hours_players, :race, :league_highest, :league_1v1, :league_2v2, :league_3v3, :league_4v4, :points, :season_games, :career_games, :apm
     @leagues = {
       0 => "bronze",
       1 => "silver",
@@ -33,7 +33,7 @@ module StarcraftApi
 
     def get_identity data
       @leagues = ["bronze","silver","gold","platinum","diamond","master","grandmaster"]
-      @id = data['id']
+      @ggtrackerid = data['id']
       @name = data['name']
       @gateway = data['gateway']
       @matches_count = data['matches_count']

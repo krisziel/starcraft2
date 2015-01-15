@@ -72,16 +72,34 @@
     line-height: 26px;
     border-top: 1px solid #FFFFFF;
     .league-small {
-      float: left;
+      float: right;
     }
     .race-small {
-      margin: 2px 0 0 5px;
-      float: left;
+      margin: 2px 0 0 0;
+      float: right;
+    }
+    .blank-space {
+      float: right;
+      width: 30px;
     }
   }
   .title {
     font-size: 22px;
     border-top: 0;
+    border-bottom: 1px solid #FFFFFF;
+    .clan-members-title {
+      width: 180px;
+      float: left;
+    }
+    .save-clan-button {
+      width: 96px;
+      float: right;
+      border-left: 2px solid #FFFFFF;
+      height: 36px;
+      line-height: 36px;
+      font-size: 20px;
+      margin: -5px -5px 0 0;
+    }
   }
   .create {
     font-size: 20px;
@@ -103,4 +121,9 @@
 }
 .visible {
   opacity: 1;
+}
+.loading-button {
+  background: url('loading.gif') no-repeat center center;
+  background-size: 22px 22px;
+  color: rgba(0,0,0,0);
 }

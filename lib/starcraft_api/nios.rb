@@ -1,7 +1,7 @@
 module StarcraftApi
 
   class Nios
-    attr_accessor :tag, :name, :html, :members
+    attr_accessor :tag, :name, :members
 
     def initialize
 

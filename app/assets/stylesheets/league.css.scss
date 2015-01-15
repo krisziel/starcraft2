@@ -108,14 +108,17 @@
 }
 .protoss-small {
   background-image: url(protoss-small.png);
-  margin: 0 0 0 -2px !important;
+  padding: 0 2px 0 0 !important;
+  margin-top: -2px;
+  margin-right: 2px;
+  background-position: 5px -1px;
 }
 .zerg-small {
   background-image: url(zerg-small.png);
   margin-top: -1px !important;
-  margin-left: 2px !important;
+  padding-left: 2px !important;
 }
 .terran-small {
   background-image: url(terran-small.png);
-  margin-left: 0px !important;
+  padding-left: 0px !important;
 }

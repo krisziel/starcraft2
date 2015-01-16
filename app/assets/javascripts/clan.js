@@ -36,15 +36,6 @@ function searchClan(args) {
   },'json');
 }
 
-function loadClan(args) {
-  $('#clan-search-loading').addClass('visible');
-  $.post('clans/.json', { tag:args.tag }, function(data) {
-    $('body').append('<div class="profile"></div>');
-    $('.profile').css({display:'block',opacity:1});
-    $('#clan-search-loading').addClass('visible');
-  },'json');
-}
-
 function saveClan(args) {
   if(!args || !args.tag) {
     return false;
@@ -54,6 +45,15 @@ function saveClan(args) {
     $('#save-clan-button').removeClass('loading-button').html("Created");
     loadClan(data.id);
   });
+}
+
+function loadClan(args) {
+  $('#clan-search-loading').addClass('visible');
+  $.post('clans/.json', { tag:args.tag }, function(data) {
+    $('body').append('<div class="profile"></div>');
+    $('.profile').css({display:'block',opacity:1});
+    $('#clan-search-loading').addClass('visible');
+  },'json');
 }
 
 // jQuery('<li/>', {
